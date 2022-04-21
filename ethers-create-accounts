@@ -1,28 +1,28 @@
-const  ethers = require('ethers');
+const ethers = require('ethers');
 
 async function init(i) {
-    const wallet = ethers.Wallet.createRandom();
+    let wallet = ethers.Wallet.createRandom();
     
-    const address = wallet.address;
-    console.log(address)
+    let address = wallet.address;
+    console.log(address);
 
-    const privateKey = wallet.privateKey;
-    console.log(privateKey)
+    let privateKey = wallet.privateKey;
+    console.log(privateKey);
 
-    const mnemonic = wallet.mnemonic;
-    console.log(mnemonic)
+    let mnemonic = wallet.mnemonic;
+    console.log(mnemonic);
 
-    const fs = require("fs");
-    fs.appendFile('address+privateKey100.csv', address + `,` + privateKey + `\r\n`, function (err) {
+    let fs = require("fs");
+    fs.appendFile('address+privateKey+mnemonic10.csv', address + `,` + privateKey +`\r\n`, function (err) {
         if (err) {
             return console.error(err);
-        }
+        };
     });
 
-    if (i >= 100) {  // 修改数字，来生成你需要的地址私钥数量/Modify the number to generate the number of address private keys you need
-        return
-    }
+    if (i >= 10) {  // 修改数字，来生成你需要的地址私钥数量/Modify the number to generate the number of address private keys you need
+        return;
+    };
     i += 1;
-    init(i)
+    init(i);
 }
-init(1)
+init(1);
