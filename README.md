@@ -6,3 +6,6 @@ Very simple batch generation wallet script.
 
 只要你有一点JS+Ethers.js的基础，就可以很快的批量生成无数个你的ETH钱包地址+私钥。
 As long as you have some basic JS+ ethers.js, you can quickly batch generate countless of your ETH wallet addresses + private keys.
+
+
+https://mainnet.infura.io/v3/your id`——https://www.infura.io/ 注册一个帐号，换成你的ID
