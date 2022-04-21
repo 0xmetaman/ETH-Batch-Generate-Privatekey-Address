@@ -1,18 +1,18 @@
-var  ethers = require('ethers');
+const  ethers = require('ethers');
 
 async function init(i) {
-    var wallet = ethers.Wallet.createRandom();
+    const wallet = ethers.Wallet.createRandom();
     
-    var address = wallet.address;
+    const address = wallet.address;
     console.log(address)
 
-    var privateKey = wallet.privateKey;
+    const privateKey = wallet.privateKey;
     console.log(privateKey)
 
-    var mnemonic = wallet.mnemonic;
+    const mnemonic = wallet.mnemonic;
     console.log(mnemonic)
 
-    var fs = require("fs");
+    const fs = require("fs");
     fs.appendFile('address+privateKey100.csv', address + `,` + privateKey + `\r\n`, function (err) {
         if (err) {
             return console.error(err);
