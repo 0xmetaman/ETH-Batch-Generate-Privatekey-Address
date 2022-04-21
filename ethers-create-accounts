@@ -1,3 +1,5 @@
+//By @01MetaMan https://twitter.com/01MetaMan
+
 const ethers = require('ethers');
 
 async function init(i) {
