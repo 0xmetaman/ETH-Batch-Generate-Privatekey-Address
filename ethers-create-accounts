@@ -1,5 +1,4 @@
 var  ethers = require('ethers');
-const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/your id`) //换成你的ID/Change it to your ID， https://www.infura.io/ 注册一个帐号，换成你的ID
 
 async function init(i) {
     var wallet = ethers.Wallet.createRandom();
