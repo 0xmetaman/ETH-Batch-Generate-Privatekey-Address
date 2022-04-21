@@ -2,7 +2,9 @@
 ETH-Batch-Generate-Privatekey-Address-Ethers.js
 
 提供2个版本供大家学习。
+
 1，ethers-create-accounts —— ethers.js方法版本
+
 2，web3-create-accounts —— web3.js方法版本
 
 非常简单的批量生成钱包脚本。
