@@ -1,0 +1,29 @@
+var  ethers = require('ethers');
+const provider = new ethers.providers.JsonRpcProvider(`https://mainnet.infura.io/v3/your id`) //换成你的ID/Change it to your ID
+
+async function init(i) {
+    var wallet = ethers.Wallet.createRandom();
+    
+    var address = wallet.address;
+    console.log(address)
+
+    var privateKey = wallet.privateKey;
+    console.log(privateKey)
+
+    var mnemonic = wallet.mnemonic;
+    console.log(mnemonic)
+
+    var fs = require("fs");
+    fs.appendFile('address+privateKey100.csv', address + `,` + privateKey + `\r\n`, function (err) {
+        if (err) {
+            return console.error(err);
+        }
+    });
+
+    if (i >= 100) {  // 修改数字，来生成你需要的地址私钥数量/Modify the number to generate the number of address private keys you need
+        return
+    }
+    i += 1;
+    init(i)
+}
+init(1)
