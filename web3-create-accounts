@@ -1,0 +1,29 @@
+//By @01MetaMan https://twitter.com/01MetaMan
+//web3.js方法版本
+
+const { privateKeyExport } = require('secp256k1');
+var Web3 = require('web3'); 
+var url = 'https://mainnet.infura.io/v3/662fb7634923434fa31d2b6370e485c3';
+var web3 = new Web3(url);
+
+async function init(i) {
+    let account = web3.eth.accounts.create();
+    let ethaddress = account.address;
+    console.log(ethaddress);
+    let privateKey = account.privateKey;
+    console.log(privateKey);
+
+    var fs = require("fs");
+    fs.appendFile('帐号5.csv', ethaddress + `,` + privateKey + `\r\n`, function (err) {
+        if (err) {
+            return console.error(err);
+        };
+    });
+
+    if (i >= 5) {  // 修改数字，来生成你需要的地址私钥数量
+        return
+    };
+    i += 1;
+    init(i);
+}
+init(1);
