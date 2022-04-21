@@ -10,3 +10,5 @@ As long as you have some basic JS+ ethers.js, you can quickly batch generate cou
 
 https://mainnet.infura.io/v3/yourid
 ——https://www.infura.io/ 注册一个帐号，换成你的ID
+
+![image](https://user-images.githubusercontent.com/100831734/164353554-eee0a6db-bb1d-4bed-850c-114ae56a0368.png)
