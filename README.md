@@ -8,4 +8,5 @@ Very simple batch generation wallet script.
 As long as you have some basic JS+ ethers.js, you can quickly batch generate countless of your ETH wallet addresses + private keys.
 
 
-https://mainnet.infura.io/v3/your id`——https://www.infura.io/ 注册一个帐号，换成你的ID
+https://mainnet.infura.io/v3/yourid
+——https://www.infura.io/ 注册一个帐号，换成你的ID
